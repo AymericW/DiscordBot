@@ -92,7 +92,6 @@ function transmuteCommand(recievedMessage) {
     recievedMessage.channel.send(exampleEmbed)
 }
 
-//client.login('NzE4Mzk0MzkyMzA5NjYxNjk3.XtoO6g.T7NCQMGYWQLUWxxbjYghDTZ-NHE');
 
 client.login(process.env.BOT_TOKEN);
 
