@@ -2,9 +2,9 @@
     "name": "FAQBot",
     "description": "Help to the Community",
     "version": "0.0.0",
-    "main": "IDKBOT.js",
+    "main": "idkbot.js",
     "scripts": {
-        "start": "node IDKBOT.js"
+        "start": "node idkbot.js"
     },
     "dependencies": {
         "discord.js": "11.1.0",
