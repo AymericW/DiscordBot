@@ -53,7 +53,9 @@ function processCommand(recievedMessage) {
         helpCommand(recievedMessage);
     }else if (primaryCommand == 'transmute'){
         transmuteCommand(recievedMessage)
-    }
+    }else if (primaryCommand == 'multiplayerwhen'){
+        recievedMessage.channel.send("NO. Steam remote play is available !")
+    } 
     
 
 }
@@ -72,18 +74,20 @@ function transmuteCommand(recievedMessage) {
 	.setColor('#0099ff')
 	.setTitle('Transmute Recipes')
 	.setAuthor('Chronicon Bot', 'https://i.imgur.com/j8ib8pK.png')
-	.setDescription('Some description here')
+	.setDescription('Here are all the recipes for transmutation')
 	.setThumbnail('https://i.imgur.com/j8ib8pK.png')
 	.addFields(
-		{ name: 'Regular field title', value: 'Some value here' },
-		{ name: '\u200B', value: '\u200B' },
-		{ name: 'Inline field title', value: 'Some value here', inline: true },
-		{ name: 'Inline field title', value: 'Some value here', inline: true },
-	)
-	.addField('Inline field title', 'Some value here', true)
-	.setImage('https://i.imgur.com/wSTFkRM.png')
+		{ name: 'Apply greater Rune', value: 'Consumes 50x Champions crown and a Greater rune to apply it to a fitting item' },
+        { name: 'Apply lesser Rune', value: 'Consumes 50x Champions crown and a Lesser rune to apply it to a fitting item' },
+        { name: 'Create Greater Rune', value: 'Consumes 50x Champions crown, any True Legendeary item with a Power on it, and a Runestone to create a Greater rune holding the power of the item. The item is lost in the process' },
+        { name: 'Create Greater Rune', value: 'Consumes 50x Champions crown, any unique or legendary item with a Power on it, and a Runestone to create a Lesser rune holding the power of the item. The item is lost in the process' },
+        { name: 'Permanenet socket', value: 'Consumes 30x Champions crown and any Prismatic Socket to socket an item with a new permanent Prismatic socket - Only one can be applied to an item'},
+        { name: 'Set Item conversion', value: 'Sacrifice 30x Champions crown and a Set item of any quality to get a different item from the same set'},
+        { name: 'Unlock enchants', value: 'Unlock all Enchants on any equipment by transmuting it with 25x Keys'},
+        { name: 'Create spell codex', value: 'Comibining 50x of any spell scrol with a Spell codex crates a codex of that spell with unlimited use'}
+        )
 	.setTimestamp()
-    .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+    .setFooter('Big thanks to Squarebit for the game <3', 'https://i.imgur.com/j8ib8pK.png');
     
     recievedMessage.channel.send(exampleEmbed)
 }
@@ -91,3 +95,4 @@ function transmuteCommand(recievedMessage) {
 //client.login('NzE4Mzk0MzkyMzA5NjYxNjk3.XtoO6g.T7NCQMGYWQLUWxxbjYghDTZ-NHE');
 
 client.login(process.env.BOT_TOKEN);
+

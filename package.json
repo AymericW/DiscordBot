@@ -4,7 +4,8 @@
     "version": "1.0.0",
     "main": "idkbot.js",
     "scripts": {
-        "start": "node idkbot.js"
+        "start": "nodem idkbot.js",
+        "live": "nodemon idkbot.js"
     },
     "dependencies": {
         "bitfield": "^3.0.0",
