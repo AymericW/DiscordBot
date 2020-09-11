@@ -1,1 +1,1 @@
-worker: node IDKBOT.js
+worker: node idkbot.js
