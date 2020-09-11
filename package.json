@@ -1,7 +1,7 @@
 {
     "name": "FAQBot",
     "description": "Help to the Community",
-    "version": "12.18.0",
+    "version": "1.0.0",
     "main": "idkbot.js",
     "scripts": {
         "start": "node idkbot.js"
