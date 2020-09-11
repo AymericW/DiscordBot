@@ -11,7 +11,7 @@ let bodyresponse;
 client.on('ready', async () => {
     console.log('Connected as ' + client.user.tag)
 
-    client.user.setActivity('D&D', {type: "PLAYING"})
+    client.user.setActivity('FAQ Commands', {type: "PLAYING"})
 
     client.guilds.cache.forEach((guild) => {
         console.log(guild.name);
@@ -49,45 +49,43 @@ function processCommand(recievedMessage) {
     let primaryCommand = splitCommand[0];
     let arguments = splitCommand.slice(1);
 
-    if (primaryCommand == 'r') {
-        helpCommand(arguments, recievedMessage);
-    }else if (primaryCommand == 'shutup'){
-        shutupCommand(recievedMessage)
-    }
-    else if (primaryCommand == 'hp'){
-        healthCommand(arguments, recievedMessage);
-    }
-}
-
-function healthCommand(arguments, recievedMessage){
-    if (arguments != null) {
-        console.log(arguments);
-        let hpmodif = Math.ceil(Math.random() * arguments[0]) + (arguments[1] * 2);
-        console.log(hpmodif);
-        recievedMessage.channel.send(hpmodif);
-    }
-}
-
-
-function helpCommand(arguments, recievedMessage) {
-
-    if (arguments.length == 0){
-        recievedMessage.channel.send("I'm not sure what u need help with. Try `!help [topic]`");
-    } 
-    else if (arguments != null)  {
-        let nmbr = Math.ceil(Math.random() * arguments);
-        recievedMessage.channel.send(nmbr);
+    if (primaryCommand == 'runes') {
+        helpCommand(recievedMessage);
+    }else if (primaryCommand == 'transmute'){
+        transmuteCommand(recievedMessage)
     }
     
-    
-    else {
-        recievedMessage.channel.send("It looks like u need help with " + arguments);
-    }
+
 }
 
 
-function shutupCommand(recievedMessage) {
-    recievedMessage.channel.send("Please SHUT THE FUCK UP YOU MONKEY ")
+
+
+function helpCommand(recievedMessage) {
+    recievedMessage.channel.send("For everything runes related please go to 'https://steamcommunity.com/sharedfiles/filedetails/?id=1911997938'");  
+}
+
+
+function transmuteCommand(recievedMessage) {
+
+    const exampleEmbed = new Discord.MessageEmbed()
+	.setColor('#0099ff')
+	.setTitle('Transmute Recipes')
+	.setAuthor('Chronicon Bot', 'https://i.imgur.com/j8ib8pK.png')
+	.setDescription('Some description here')
+	.setThumbnail('https://i.imgur.com/j8ib8pK.png')
+	.addFields(
+		{ name: 'Regular field title', value: 'Some value here' },
+		{ name: '\u200B', value: '\u200B' },
+		{ name: 'Inline field title', value: 'Some value here', inline: true },
+		{ name: 'Inline field title', value: 'Some value here', inline: true },
+	)
+	.addField('Inline field title', 'Some value here', true)
+	.setImage('https://i.imgur.com/wSTFkRM.png')
+	.setTimestamp()
+    .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+    
+    recievedMessage.channel.send(exampleEmbed)
 }
 
 //client.login('NzE4Mzk0MzkyMzA5NjYxNjk3.XtoO6g.T7NCQMGYWQLUWxxbjYghDTZ-NHE');
