@@ -90,4 +90,6 @@ function shutupCommand(recievedMessage) {
     recievedMessage.channel.send("Please SHUT THE FUCK UP YOU MONKEY ")
 }
 
-client.login(process.env.BOT_TOKEN);
+client.login('Yn9VKGjXYOE3fThQGuqpNc6lpHrlK_sa');
+
+//client.login(process.env.BOT_TOKEN);

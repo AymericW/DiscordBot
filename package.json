@@ -1,13 +1,14 @@
 {
     "name": "FAQBot",
     "description": "Help to the Community",
-    "version": "0.0.0",
+    "version": "12.18.0",
     "main": "idkbot.js",
     "scripts": {
         "start": "node idkbot.js"
     },
     "dependencies": {
-        "discord.js": "11.1.0",
+        "discord.js": "^11.1.0",
+        "node-fetch": "^2.6.1",
         "request": "2.81.0"
     }
 }
