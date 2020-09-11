@@ -22,7 +22,7 @@ client.on('ready', async () => {
         // general channel id -- 356988588866404354 ---
     })
 
-  
+
 
     let generalChannel = client.channels.cache.get('356988588866404354');
     // const attachment = new MessageAttachment('./assets/WDOgzsx.jpg');
@@ -55,13 +55,34 @@ function processCommand(recievedMessage) {
         transmuteCommand(recievedMessage)
     }else if (primaryCommand == 'multiplayerwhen'){
         recievedMessage.channel.send("NO. Steam remote play is available !")
-    } 
+    }else if (primaryCommand == "builds") {
+        buildCommand(recievedMessage)
+    }
     
 
 }
 
 
-
+function buildCommand(recievedMessage) {
+    const buildEmbed = new Discord.MessageEmbed()
+    .setColor('RED')
+	.setTitle('Builds 1.0')
+	.setAuthor('Chronicon Bot', 'https://i.imgur.com/j8ib8pK.png')
+	.setDescription('Here are all the links for known builds for 1.0')
+	.setThumbnail('https://i.imgur.com/j8ib8pK.png')
+	.addFields(
+		{ name: 'NullPointers Build dump', value: 'https://steamcommunity.com/app/375480/discussions/5/2942494909178938501/' },
+        { name: 'Darkness ThunderCharged Avenger Templar', value: 'https://steamcommunity.com/app/375480/discussions/5/2913220877919620020/' },
+        { name: 'Muggs Holy fire Hammerdin', value: 'https://steamcommunity.com/app/375480/discussions/5/2913220877912543056/' },
+        { name: 'Shrank CoC Tornado Templar', value: 'https://steamcommunity.com/app/375480/discussions/5/4625714282757628078/' },
+        { name: 'Flash Fire 0TL M15 MF Farming build Warlock', value: 'https://www.youtube.com/watch?v=Aub3iiqJl28'},
+        { name: 'Thunder Orb Stormcaller Warden M15 0TL Farming Build 825% Magic Find', value: 'https://www.youtube.com/watch?v=2zGi_zamV3U'},
+        )
+	.setTimestamp()
+    .setFooter('Big thanks to Squarebit for the game <3', 'https://i.imgur.com/j8ib8pK.png');
+    
+    recievedMessage.channel.send(buildEmbed)   
+}
 
 function helpCommand(recievedMessage) {
     recievedMessage.channel.send("For everything runes related please go to 'https://steamcommunity.com/sharedfiles/filedetails/?id=1911997938'");  
