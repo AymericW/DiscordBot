@@ -8,6 +8,7 @@
     },
     "dependencies": {
         "bitfield": "^3.0.0",
+        "discord.js": "^12.3.1",
         "node-fetch": "^2.6.1",
         "request": "2.81.0"
     },
