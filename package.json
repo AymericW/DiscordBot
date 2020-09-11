@@ -1,0 +1,13 @@
+{
+    "name": "FAQBot",
+    "description": "Help to the Community",
+    "version": "0.0.0",
+    "main": "IDKBOT.js",
+    "scripts": {
+        "start": "node IDKBOT.js"
+    },
+    "dependencies": {
+        "discord.js": "11.1.0",
+        "request": "2.81.0"
+    }
+}
