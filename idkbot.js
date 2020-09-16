@@ -52,11 +52,11 @@ function processCommand(recievedMessage) {
     if (primaryCommand == 'act1') {
         act1command(recievedMessage);
     }else if (primaryCommand == 'act2'){
-        transmuteCommand(recievedMessage)
+        act2command(recievedMessage)
     }else if (primaryCommand == 'act3'){
-        recievedMessage.channel.send("NO. Steam remote play is available !")
+        act1command(recievedMessage)
     }else if (primaryCommand == "act4") {
-        buildCommand(recievedMessage)
+        act1command(recievedMessage)
     }
     
 
@@ -65,8 +65,8 @@ function processCommand(recievedMessage) {
 function act1command(recievedMessage) {
     const buildEmbed = new Discord.MessageEmbed()
     .setColor('RED')
-	.setTitle('Builds 1.0')
-	.setAuthor('Chronicon Bot', 'https://i.imgur.com/j8ib8pK.png')
+	.setTitle('ACT1 Leveling')
+	.setAuthor('POE BOT', 'https://i.imgur.com/j8ib8pK.png')
 	.setDescription('Here are all the links for known builds for 1.0')
 	.setThumbnail('https://i.imgur.com/j8ib8pK.png')
 	.addFields(
@@ -77,10 +77,38 @@ function act1command(recievedMessage) {
         { name: 'Step5', value: 'Merveil second phase bosskiller puts portal up and we all tp in to kill her'},
         )
 	.setTimestamp()
-    .setFooter('Big thanks to Squarebit for the game <3', 'https://i.imgur.com/j8ib8pK.png');
+    .setFooter('Big Leveling Process', 'https://i.imgur.com/j8ib8pK.png');
     
     recievedMessage.channel.send(buildEmbed)
-    }
+}
+
+function act2command(recievedMessage) {
+    const buildEmbed = new Discord.MessageEmbed()
+    .setColor('RED')
+	.setTitle('ACT2 Leveling')
+	.setAuthor('POE BOT', 'https://i.imgur.com/j8ib8pK.png')
+	.setDescription('Here are all the links for known builds for 1.0')
+	.setThumbnail('https://i.imgur.com/j8ib8pK.png')
+	.addFields(
+		{ name: 'Step1', value: ' - Aurabot goes to Broken bridge (Kraitlyn bandit) and put up a tp and waits for the rest (XP there while waiting)' },
+        { name: 'Step2', value: ' - Bosskiller goes to Chamber of sins (to put up a tp we dont have to be there to kill the boss in lvl 2)' },
+        { name: 'Step3', value: ' - MF carry goes to Wetlands for Oak (put up a portal)' },
+        { name: 'Step4', value: ' - Cursebot goes for Alira (put up a portal)' },
+        { name: 'Step5', value: '=> When everyone has a portal we swirly tp to Aurabot to kill Kraitlyn then go to town with aurabot portal'},
+        { name: 'Step5', value: '=> After that we go chamber of sins for the gem (then go back town)'},
+        { name: 'Step5', value: '=> Take portal for Alira (we all go to weaver together)'},
+        { name: 'Step5', value: '=> We tp to mf carry on oak waypoint to kill him + unlock the veins'},
+        { name: 'Step6', value: ' - We all level in Riverways while waiting for nothern forest waypoint'},
+        { name: 'Step7', value: ' - Bosskiller goes to the nothern forest (Put a tp up on the round curse ball)'},
+        { name: 'Step8', value: ' - We all level in nothern forest'},
+        { name: 'Step9', value: ' - Bosskiller needs to have wand crafts'},
+        { name: 'Step9', value: ' - Bosskiller goes for Act 2 boss we (put a portal up)'},
+        )
+	.setTimestamp()
+    .setFooter('Big Leveling Process', 'https://i.imgur.com/j8ib8pK.png');
+    
+    recievedMessage.channel.send(buildEmbed)
+}
 
 
 
