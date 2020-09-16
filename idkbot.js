@@ -49,18 +49,40 @@ function processCommand(recievedMessage) {
     let primaryCommand = splitCommand[0];
     let arguments = splitCommand.slice(1);
 
-    if (primaryCommand == 'runes') {
+    if (primaryCommand == 'act1') {
         helpCommand(recievedMessage);
-    }else if (primaryCommand == 'transmute'){
+    }else if (primaryCommand == 'act2'){
         transmuteCommand(recievedMessage)
-    }else if (primaryCommand == 'multiplayerwhen'){
+    }else if (primaryCommand == 'act3'){
         recievedMessage.channel.send("NO. Steam remote play is available !")
-    }else if (primaryCommand == "builds") {
+    }else if (primaryCommand == "act4") {
         buildCommand(recievedMessage)
     }
     
 
 }
+
+function act1command(recievedMessage) {
+    const buildEmbed = new Discord.MessageEmbed()
+    .setColor('RED')
+	.setTitle('Builds 1.0')
+	.setAuthor('Chronicon Bot', 'https://i.imgur.com/j8ib8pK.png')
+	.setDescription('Here are all the links for known builds for 1.0')
+	.setThumbnail('https://i.imgur.com/j8ib8pK.png')
+	.addFields(
+		{ name: 'Step1', value: ' - All level in ledge (except bosskiller ofc "watch out for alterations + portal scrolls)' },
+        { name: 'Step2', value: ' - Bosskiller hard pushes brutus (cursebot does trial)' },
+        { name: 'Step3', value: ' - When bosskiller is in brutus puts a portal up at 20% and we all tp to him (click on blue swirly)' },
+        { name: 'Step4', value: 'We all level in prisoners gate (except boss killer goes to pushes merveil)' },
+        { name: 'Step5', value: 'Merveil second phase bosskiller puts portal up and we all tp in to kill her'},
+        )
+	.setTimestamp()
+    .setFooter('Big thanks to Squarebit for the game <3', 'https://i.imgur.com/j8ib8pK.png');
+    
+    recievedMessage.channel.send(buildEmbed)   
+
+
+
 
 
 function buildCommand(recievedMessage) {
@@ -85,7 +107,7 @@ function buildCommand(recievedMessage) {
 }
 
 function helpCommand(recievedMessage) {
-    recievedMessage.channel.send("For everything runes related please go to 'https://steamcommunity.com/sharedfiles/filedetails/?id=1911997938'");  
+    recievedMessage.channel.send("For everything runes related please go to 'https://steamcommunity.com/sharedfiles/filedetails/?id=1911997938'"); 
 }
 
 
