@@ -79,7 +79,8 @@ function act1command(recievedMessage) {
 	.setTimestamp()
     .setFooter('Big thanks to Squarebit for the game <3', 'https://i.imgur.com/j8ib8pK.png');
     
-    recievedMessage.channel.send(buildEmbed)   
+    recievedMessage.channel.send(buildEmbed)
+    }
 
 
 
@@ -136,5 +137,4 @@ function transmuteCommand(recievedMessage) {
 }
 
 
-client.login(process.env.BOT_TOKEN);
-
+client.login(process.env.BOT_TOKEN)
