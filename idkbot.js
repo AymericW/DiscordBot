@@ -50,7 +50,7 @@ function processCommand(recievedMessage) {
     let arguments = splitCommand.slice(1);
 
     if (primaryCommand == 'act1') {
-        helpCommand(recievedMessage);
+        act1command(recievedMessage);
     }else if (primaryCommand == 'act2'){
         transmuteCommand(recievedMessage)
     }else if (primaryCommand == 'act3'){
