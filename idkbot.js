@@ -54,7 +54,7 @@ function processCommand(recievedMessage) {
     }else if (primaryCommand == 'act2'){
         act2command(recievedMessage)
     }else if (primaryCommand == 'act3'){
-        act1command(recievedMessage)
+        act3command(recievedMessage)
     }else if (primaryCommand == "act4") {
         act1command(recievedMessage)
     }
@@ -111,6 +111,32 @@ function act2command(recievedMessage) {
     recievedMessage.channel.send(buildEmbed)
 }
 
+function act3command(recievedMessage) {
+    const buildEmbed = new Discord.MessageEmbed()
+    .setColor('RED')
+	.setTitle('ACT2 Leveling')
+	.setAuthor('POE BOT', 'https://i.imgur.com/j8ib8pK.png')
+	.setDescription('Here are all the links for known builds for 1.0')
+	.setThumbnail('https://i.imgur.com/j8ib8pK.png')
+	.addFields(
+		{ name: 'Step1', value: ' - Aurabot + mf levels in city of sarn' },
+        { name: 'Step2', value: ' - Bosskiller goes for crematorium piety and discbot goes for trial ' },
+        { name: 'Step3', value: ' - We all open sewers and all grab the busts' },
+        { name: 'Step4', value: ' - Bosskiller gets battlefront waypoint for item + dock tp ' },
+        { name: 'Step5', value: ' - Discbot gets trial in catacombs'},
+        { name: 'Step5', value: ' - We all level in docks (Except bosskiller ofc)'},
+        { name: 'Step5', value: ' - Bosskiller goes for solaris level 2 (puts a portal up at the NPC )'},
+        { name: 'Step5', value: ' - We all tp to get Sewers Item to unlock passage'},
+        { name: 'Step5', value: ' - Bosskiller goes for lunaris temple piety (tower key and opens a portal for us to tp in)'},
+        { name: 'Step6', value: ' - We all level in Riverways while waiting for nothern forest waypoint'},
+        { name: 'Step7', value: ' - Discbot goes for trial and library if needed (tps on bosskiller)'},
+        { name: 'Step8', value: ' - Bosskiller goes for dominus and we tp in at last phase'},
+        )
+	.setTimestamp()
+    .setFooter('Big Leveling Process', 'https://i.imgur.com/j8ib8pK.png');
+    
+    recievedMessage.channel.send(buildEmbed)
+}
 
 
 
