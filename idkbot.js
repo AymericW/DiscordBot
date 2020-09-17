@@ -114,7 +114,7 @@ function act2command(recievedMessage) {
 function act3command(recievedMessage) {
     const buildEmbed = new Discord.MessageEmbed()
     .setColor('RED')
-	.setTitle('ACT2 Leveling')
+	.setTitle('ACT3 Leveling')
 	.setAuthor('POE BOT', 'https://i.imgur.com/j8ib8pK.png')
 	.setDescription('Here are all the links for known builds for 1.0')
 	.setThumbnail('https://i.imgur.com/j8ib8pK.png')
