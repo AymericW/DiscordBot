@@ -2,7 +2,7 @@ Act 1 :
 
 - All level in ledge (except bosskiller ofc "watch out for alterations + portal scrolls)
 
-- Bosskiller hard pushes brutus (cursebot does trial)
+- Bosskiller hard pushes brutus (discbot does trial)
 
 - When bosskiller is in brutus puts a portal up at 20% and we all tp to him (click on blue swirly)
 
@@ -25,14 +25,16 @@ Act 2 :
 => Take portal for Alira (we all go to weaver together)
 => We tp to mf carry on oak waypoint to kill him + unlock the veins
 
--We all level in Riverways while waiting for nothern forest waypoint
+- Weavers chambers tp (discbot or bosskiller)
+
+- We all level in Riverways while waiting for nothern forest waypoint
 
 - Bosskiller goes to the nothern forest (Put a tp up on the round curse ball)
 
--We all level in nothern forest
+- We all level in nothern forest
 
--Bosskiller needs to have wand crafts
--Bosskiller goes for Act 2 boss we (put a portal up)
+- Bosskiller needs to have wand crafts
+- Bosskiller goes for Act 2 boss we (put a portal up)
 
 Act 3: 
 

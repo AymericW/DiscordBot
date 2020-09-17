@@ -67,11 +67,11 @@ function act1command(recievedMessage) {
     .setColor('RED')
 	.setTitle('ACT1 Leveling')
 	.setAuthor('POE BOT', 'https://i.imgur.com/j8ib8pK.png')
-	.setDescription('Here are all the links for known builds for 1.0')
+    .setDescription('Here is a small group guide for act 2')
 	.setThumbnail('https://i.imgur.com/j8ib8pK.png')
 	.addFields(
 		{ name: 'Step1', value: ' - All level in ledge (except bosskiller ofc "watch out for alterations + portal scrolls)' },
-        { name: 'Step2', value: ' - Bosskiller hard pushes brutus (cursebot does trial)' },
+        { name: 'Step2', value: ' - Bosskiller hard pushes brutus (discbot does trial)' },
         { name: 'Step3', value: ' - When bosskiller is in brutus puts a portal up at 20% and we all tp to him (click on blue swirly)' },
         { name: 'Step4', value: 'We all level in prisoners gate (except boss killer goes to pushes merveil)' },
         { name: 'Step5', value: 'Merveil second phase bosskiller puts portal up and we all tp in to kill her'},
@@ -97,6 +97,7 @@ function act2command(recievedMessage) {
         { name: 'Step5', value: '=> When everyone has a portal we swirly tp to Aurabot to kill Kraitlyn then go to town with aurabot portal'},
         { name: 'Step5', value: '=> After that we go chamber of sins for the gem (then go back town)'},
         { name: 'Step5', value: '=> Take portal for Alira (we all go to weaver together)'},
+        { name: 'Step5', value: '=> Weavers Chambers (discbot or bosskiller)'},
         { name: 'Step5', value: '=> We tp to mf carry on oak waypoint to kill him + unlock the veins'},
         { name: 'Step6', value: ' - We all level in Riverways while waiting for nothern forest waypoint'},
         { name: 'Step7', value: ' - Bosskiller goes to the nothern forest (Put a tp up on the round curse ball)'},
